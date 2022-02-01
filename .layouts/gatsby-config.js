@@ -1,13 +1,13 @@
 const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
-  title: "Obsidian Template for Gatsby Theme Primer Wiki",
-  shortName: "Wiki",
+  title: "Brain Dam",
+  shortName: "Dam",
   description:
-    "Another Obsidian template that use gatsby-theme-primer-wiki, Welcome to your new Obsidian Knowledge Base!",
-  twitterName: "theowenyoung",
-  imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://demo-obsidian.owenyoung.com",
+    "Knowledge, thoughts and more, that for some reason I need to remember.",
+//   twitterName: "theowenyoung",
+//   imageUrl: "/graph-visualisation.jpg",
+  siteUrl: "https://thomassajot.brain-dam.com",
 };
 module.exports = {
   siteMetadata,
