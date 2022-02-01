@@ -26,20 +26,20 @@ module.exports = {
     },
     {
       resolve: "gatsby-theme-primer-wiki",
-      options: {
-        nav: [
-          {
-            title: "Github",
-            url: "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/",
-          },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/theowenyoung",
-          },
-        ],
-        editUrl:
-          "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/tree/main/",
-      },
+//       options: {
+//         nav: [
+//           {
+//             title: "Github",
+//             url: "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/",
+//           },
+//           {
+//             title: "Twitter",
+//             url: "https://twitter.com/theowenyoung",
+//           },
+//         ],
+//         editUrl:
+//           "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/tree/main/",
+//       },
     },
     {
       resolve: "gatsby-plugin-manifest",
