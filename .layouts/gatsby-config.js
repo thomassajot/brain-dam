@@ -2,7 +2,7 @@ const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
   title: "Brain Dam",
-  shortName: "Dam",
+  shortName: "Brain Dam",
   description:
     "Knowledge, thoughts and more, that for some reason I need to remember.",
 //   twitterName: "theowenyoung",
