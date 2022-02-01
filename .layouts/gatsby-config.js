@@ -34,7 +34,7 @@ module.exports = {
           },
           {
             title: "About",
-//             url: "https://twitter.com/theowenyoung",
+            url: "https://twitter.com/theowenyoung",
           },
         ],
         editUrl:
