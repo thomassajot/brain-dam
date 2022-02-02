@@ -19,7 +19,6 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        icon: "./static/logo.png",
         name: "content",
         path: `${__dirname}/..`,
         ignore: [`**/\.*/**/*`],
@@ -28,6 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-primer-wiki",
       options: {
+        icon: "./static/logo.png",
         nav: [
           {
             title: "Github",
