@@ -1,5 +1,5 @@
 const path = require("path");
-const pathPrefix = "/";
+const pathPrefix = "/brain-dam";
 const siteMetadata = {
   title: "Brain Dam",
   shortName: "Brain Dam",
