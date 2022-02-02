@@ -19,6 +19,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        icon: "./static/logo.png",
         name: "content",
         path: `${__dirname}/..`,
         ignore: [`**/\.*/**/*`],
