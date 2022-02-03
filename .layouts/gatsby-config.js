@@ -28,6 +28,7 @@ module.exports = {
       resolve: "gatsby-theme-primer-wiki",
       options: {
         icon: "./static/logo.png",
+        rehypePlugins: [require("rehype-katex")],
         nav: [
           {
             title: "Github",
