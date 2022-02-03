@@ -1,0 +1,1 @@
+Well explained on page 11 of `Deep Learning` book by Ian Goodfellow, Yoshua Bengio, Aaron Courville. (in my paperpile or google drive).

@@ -1,0 +1,3 @@
+[Line search](https://en.wikipedia.org/wiki/Line_search) In optimization, the line search strategy is one of two basic iterative approaches to find a local minimum  $\mathbf {x} ^{*}$ of an objective function $f:\mathbb {R} ^{n}\to \mathbb {R}$ . The other approach is [[trust region]].
+
+The line search approach first finds a descent direction along which the objective function {\displaystyle f}f will be reduced and then computes a step size that determines how far $\mathbf {x}$  should move along that direction. The descent direction can be computed by various methods, such as gradient descent or quasi-Newton method. The step size can be determined either exactly or inexactly.

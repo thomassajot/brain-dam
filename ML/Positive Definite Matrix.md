@@ -1,0 +1,2 @@
+- `semidefinite` matrix garantes: $\forall \boldsymbol{x}, \boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x} \ge 0$
+- `definite` matrix garantes: $\forall \boldsymbol{x}, \boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x} \ge 0$ and $\boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x} = 0 \Rightarrow  \boldsymbol{x} = 0$

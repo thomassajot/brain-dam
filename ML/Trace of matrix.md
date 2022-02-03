@@ -1,0 +1,4 @@
+- $Tr(\boldsymbol{A}) = \sum_i \boldsymbol{A}_{i,i}$  
+- $Tr(\boldsymbol{A}) = Tr(\boldsymbol{A}^T)$    
+- $Tr(\boldsymbol{A}\boldsymbol{B}\boldsymbol{C}) = Tr(\boldsymbol{C}\boldsymbol{A}\boldsymbol{B}) = Tr(\boldsymbol{B}\boldsymbol{C}\boldsymbol{A})$
+- 

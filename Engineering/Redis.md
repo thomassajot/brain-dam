@@ -1,0 +1,2 @@
+An In memory Key-value store. Does offer some persistent storage options but is typically used as a really fast, best-effort caching solution.   
+Redis is also often used to implement [[Rate Limiting]]
