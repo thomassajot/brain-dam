@@ -1,13 +1,14 @@
 const path = require("path");
-const pathPrefix = "/brain-dam";
+
+const pathPrefix = "/";
 const siteMetadata = {
-  title: "Brain Dam",
-  shortName: "Brain Dam",
+  title: "Obsidian Template for Gatsby Theme Primer Wiki",
+  shortName: "Wiki",
   description:
-    "Knowledge, thoughts and more, that for some reason I need to remember.",
-//   twitterName: "theowenyoung",
-//   imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://thomassajot.brain-dam.com",
+    "Another Obsidian template that use gatsby-theme-primer-wiki, Welcome to your new Obsidian Knowledge Base!",
+  twitterName: "theowenyoung",
+  imageUrl: "/graph-visualisation.jpg",
+  siteUrl: "https://demo-obsidian.owenyoung.com",
 };
 module.exports = {
   siteMetadata,
@@ -27,15 +28,13 @@ module.exports = {
     {
       resolve: "gatsby-theme-primer-wiki",
       options: {
-        icon: "./static/logo.png",
-        rehypePlugins: [require("rehype-katex")],
         nav: [
           {
             title: "Github",
-            url: "https://github.com/thomassajot/brain-dam/",
+            url: "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/",
           },
           {
-            title: "About",
+            title: "Twitter",
             url: "https://twitter.com/theowenyoung",
           },
         ],
@@ -73,16 +72,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      // Handle math equations 
+      // following the instruction on: https://zhengchaotian.com/use-gatsbyjs-with-mdx-and-latex-equations/
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        remarkPlugins: [require("remark-math")],
+        rehypePlugins: [require("rehype-katex")],
+        gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-katex`,
+            resolve: `gatsby-remark-images`,
             options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`
-            }
-          }
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
         ],
       },
     },
