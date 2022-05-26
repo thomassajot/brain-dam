@@ -1,4 +1,4 @@
-# Brain Dam: Keeping information Upd
+# Brain Dam
 
 This website contains notes following (or trying to) the [Zettelkasten principles](https://zettelkasten.de/introduction/).
 
