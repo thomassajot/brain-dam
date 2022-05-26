@@ -1,14 +1,15 @@
+//  See website from https://github.com/dfeng/notes/
+
 const path = require("path");
 
 const pathPrefix = "/";
 const siteMetadata = {
-  title: "Obsidian Template for Gatsby Theme Primer Wiki",
-  shortName: "Wiki",
+  title: "Keeping knowledge outside my brain",
+  shortName: "Brain Dam",
   description:
-    "Another Obsidian template that use gatsby-theme-primer-wiki, Welcome to your new Obsidian Knowledge Base!",
-  twitterName: "theowenyoung",
-  imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://demo-obsidian.owenyoung.com",
+    "Accumulating thoughts, knowledge, tips and anything that is worth keeping a not of. These notes are build using the obsidian tool and deployed here as well for easy access.",
+  imageUrl: "/hoover_dam.jpg",
+  siteUrl: "https://thomassajot.github.io/brain-dam/"
 };
 module.exports = {
   siteMetadata,
@@ -28,18 +29,21 @@ module.exports = {
     {
       resolve: "gatsby-theme-primer-wiki",
       options: {
+        icon: "./static/logo.png",
+        remarkPlugins: [require("remark-math")],
+        rehypePlugins: [require("rehype-katex")],
         nav: [
           {
             title: "Github",
-            url: "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/",
-          },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/theowenyoung",
-          },
+            url: "https://github.com/thomassajot/brain-dam/",
+          }
+          // {
+          //   title: "Twitter",
+          //   url: "https://twitter.com/theowenyoung",
+          // },
         ],
         editUrl:
-          "https://github.com/theowenyoung/obsidian-template-gatsby-theme-primer-wiki/tree/main/",
+          "https://github.com/thomassajot/brain-dam/tree/main/",
       },
     },
     {
@@ -70,26 +74,6 @@ module.exports = {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [],
       },
-    },
-    {
-      // Handle math equations 
-      // following the instruction on: https://zhengchaotian.com/use-gatsbyjs-with-mdx-and-latex-equations/
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        remarkPlugins: [require("remark-math")],
-        rehypePlugins: [require("rehype-katex")],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 960,
-              quality: 90,
-              linkImagesToOriginal: false,
-            },
-          },
-        ],
-      },
-    },
+    }
   ],
 };
