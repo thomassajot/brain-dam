@@ -1,0 +1,1 @@
+Being stuck on a problem because you are unable to approach it with a different angle.
