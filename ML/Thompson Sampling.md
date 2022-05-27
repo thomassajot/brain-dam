@@ -1,0 +1,4 @@
+Used for Multi-armed bandit. It is a heuristic of which arm to choose from to balance exploration vs exploitation.
+In practice, the rule is implemented by sampling. In each round, parameters $\theta^*$ are sampled from the posterior $P(\theta |\mathcal  {D})$, and an action $a^*$  chosen that maximizes $\mathbb{E} [r | \theta^*, a^*, x]$, i.e. the expected reward given the sampled parameters, the action, and the current context. Conceptually, this means that the player instantiates their beliefs randomly in each round according to the posterior distribution, and then acts optimally according to them.
+
+![[Pasted image 20220413210905.png]]

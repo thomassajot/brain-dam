@@ -1,1 +1,0 @@
-[Documentation](https://mamba.readthedocs.io/en/latest/advanced_usage/package_resolution.html)

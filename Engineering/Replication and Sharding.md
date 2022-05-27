@@ -29,7 +29,7 @@ How do you know how to split the data and where to put it ?
 For example with tables, you can split up certain rows into different shards, for example by customer name.
 
 ## Hotspots
-Some shards may get more traffic than other just by chance.  
+Some shards may get more traffic than others just by chance.  
 You use hashing function to determine what shard a piece of data is gonna be written to and read from. [[Consistent hashing]] may be useful here, depending on the problem.
 
 This logic of choosing how to do the sharding, you could implement it in the server that does the service itself. But in practice, this logic is implemented in a [[Proxies|Reverse Proxy]] that acts on behalf of the DB.

@@ -13,5 +13,5 @@ Because we are accessing value directly thoruigh keys, you can access values ver
 # Tools
 - [[Redis]] (in memory storage)
 - Dynamo DB
-- ZooKeeper
-- Etcd
+- [[ZooKeeper]]
+- [[Etcd]]

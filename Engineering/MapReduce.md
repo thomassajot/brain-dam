@@ -38,6 +38,7 @@ N3 --Reduce--> Output
 ```
 
 Do not forget, there is a `Shuffle` step between the Map and Reduce step !
+
 # Important points
 1. When dealing with MapReduce model, we assume we have a distributed file system. And the distributed FS has knowledge of where the data chunks reside and how to communicate with the machine that are going to apply the Map Operation (the `workers`).
 2. Because we have large dataset, we do not want to move the data, we move the Map operation (the map program) on the machines that contains the data.
