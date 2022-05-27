@@ -2,7 +2,7 @@
 
 const path = require("path");
 
-const pathPrefix = "/";
+const pathPrefix = "/brain-dam/";
 const siteMetadata = {
   title: "Keeping knowledge outside my brain",
   shortName: "Brain Dam",
