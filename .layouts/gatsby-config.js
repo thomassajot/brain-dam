@@ -32,6 +32,7 @@ module.exports = {
         icon: "./static/logo.png",
         remarkPlugins: [require("remark-math")],
         rehypePlugins: [require("rehype-katex")],
+        gatsbyRemarkPlugins: [{resolve: "gatsby-remark-mermaid"}],
         nav: [
           {
             title: "Github",
