@@ -1,4 +1,6 @@
-[High level explanation](https://www.toptal.com/big-data/consistent-hashing)
+# Consistent Hashing
+
+[High level explanation](https://www.toptal.com/big-data/consistent-hashing) | 
 [Tutorial with more details](https://docs.openstack.org/swift/latest/ring_background.html)
 
 General Idea:
