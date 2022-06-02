@@ -1,8 +1,13 @@
 {
-  "useTab": false,
+  "useTab": true,
   "tabSize": 2,
   "useMarkdownLinks": true,
   "attachmentFolderPath": "Attachments",
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "en-GB"
+  ],
+  "alwaysUpdateLinks": true
 }
