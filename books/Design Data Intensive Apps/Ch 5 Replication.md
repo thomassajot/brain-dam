@@ -48,7 +48,20 @@ Different approaches
 > [!tldr] Eventual Consistency
 > With asynchronous followers, due to communication issues or delay, it is possible that a replica has a delayed state compared to the leader, which can last idealy a few seconds but can be more than that (minutes !). *Eventually* the follower will get up to date.
 
-Due to eventual consistency, a user sending data to the DB, could see that the data got lost if the next request reqds from a follower that has not been updated yet. This is aweful because the user thinks the data has been lost.
+Due to eventual consistency, a user sending data to the DB, could see that the data got lost if the next request reads from a follower that has not been updated yet. This is awful because the user thinks the data has been lost.
 
-Solutions:
-1. 
+Solutions: **Read your own writes**:
+- Read from the leader when the user did a write, if not read from followers
+- Use other heuristics. Check what is the replication lags, ...
+- Collect timestamp of latest write from client and decide which replica to use. 
+
+### Monotonic reads
+
+If a user queries followers with increasing replication lags, they believe the data is regressing !
+> [!tldr] Monotonic reads
+> Enforce that the user always see the same state or a later state of the database.
+> It is a lesser guarantee than *strong consistency* but stronger than *eventual consistency*
+> eventual consistency < monotonic reads 
+
+
+
