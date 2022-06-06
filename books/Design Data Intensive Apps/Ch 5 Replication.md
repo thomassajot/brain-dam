@@ -10,7 +10,7 @@ There are multiple algorithms for replicating changes between nodes:
 
 Trade-offs to consider: **synchronous / asynchronous** and **how to handle failed replicas**.
 
-## Leaders and followers / Leader based replication / Single leader
+# Leaders and followers / Leader based replication / Single leader
 ```mermaid
 graph TD;
 
@@ -44,10 +44,11 @@ Different approaches
 4. Trigger-based replication
 
 
-### Replication Lag
+## Replication Lag
 > [!tldr] Eventual Consistency
 > With asynchronous followers, due to communication issues or delay, it is possible that a replica has a delayed state compared to the leader, which can last idealy a few seconds but can be more than that (minutes !). *Eventually* the follower will get up to date.
 
+### Reading your own Writes
 Due to eventual consistency, a user sending data to the DB, could see that the data got lost if the next request reads from a follower that has not been updated yet. This is awful because the user thinks the data has been lost.
 
 Solutions: **Read your own writes**:
@@ -61,7 +62,22 @@ If a user queries followers with increasing replication lags, they believe the d
 > [!tldr] Monotonic reads
 > Enforce that the user always see the same state or a later state of the database.
 > It is a lesser guarantee than *strong consistency* but stronger than *eventual consistency*
-> eventual consistency < monotonic reads 
+> 
+> *eventual consistency* < *monotonic reads* < *strong consistency*
+
+To solve for this, makes sure that the user is using the same replica, using a hash on the user ID for example. If the replica fails, the user needs to be routed to another replica.
+
+### Consistent Prefix Reads
+What happens if you read a reply before the question ? Not great user experience.
+
+Preventing this is called *consistent prefix reads*.
+
+> [!tldr] Consistent prefix reads
+> If a sequence of writes happens in a certain order, then anyone reading those writes will see them appear in the same order.
+
+# Multi-leader Replication
+
+
 
 
 
