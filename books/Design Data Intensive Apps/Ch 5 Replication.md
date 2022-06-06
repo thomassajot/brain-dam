@@ -1,4 +1,4 @@
-[[Replication]]
+We want [[Replication]] to handle node failure, improve scalability and latency.
 
 In this chapter we assume the dataset can fit within a single machine.
 
@@ -10,7 +10,7 @@ There are multiple algorithms for replicating changes between nodes:
 
 Trade-offs to consider: **synchronous / asynchronous** and **how to handle failed replicas**.
 
-## Leaders and followers / Leader based replication
+## Leaders and followers / Leader based replication / Single leader
 ```mermaid
 graph TD;
 
@@ -33,10 +33,22 @@ Usually, we want to have **one** follower to be synchronous and other replicas a
 4. When done, the follower has `caught up` and is now available.
 
 ### Handling node outages
+- Follower failure: recovers in the same way as spinning up a new follower
+- Leader failure: **TOUGH !**
+
 ### Implementation of replication logs
 Different approaches
 1. Statement based replication (not used anymore)
 2. Write ahead log (WAL) shipping
 3. Logical (row-based) log replication
+4. Trigger-based replication
 
 
+### Replication Lag
+> [!tldr] Eventual Consistency
+> With asynchronous followers, due to communication issues or delay, it is possible that a replica has a delayed state compared to the leader, which can last idealy a few seconds but can be more than that (minutes !). *Eventually* the follower will get up to date.
+
+Due to eventual consistency, a user sending data to the DB, could see that the data got lost if the next request reqds from a follower that has not been updated yet. This is aweful because the user thinks the data has been lost.
+
+Solutions:
+1. 
