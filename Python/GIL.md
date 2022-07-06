@@ -1,4 +1,4 @@
-> [!tldr] Global Interpreter Lock
+> 	[!tldr] Global Interpreter Lock
 > The GIL is a mutex (or a lock) that allows only one thread to hold the control of the Python interpreter.
 > 
 > - Use multi-threading for I/O bound programs because the thread has to wait to get the data.
