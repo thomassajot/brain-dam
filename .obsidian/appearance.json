@@ -3,5 +3,6 @@
   "cssTheme": "Things",
   "theme": "moonstone",
   "translucency": false,
-  "baseFontSizeAction": false
+  "baseFontSizeAction": false,
+  "accentColor": ""
 }
