@@ -27,14 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Untitled.md",
+                "file": "Papers/SurVAE flow.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0fa24c1282d9b9e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/Impact of half precision.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "0697ce7bfcfa5371",
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/Untitled.md",
+                "file": "ML/Impact of half precision.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Papers/Untitled.md",
+                "file": "ML/Impact of half precision.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Untitled.md"
+                "file": "ML/Impact of half precision.md"
               }
             }
           }
@@ -170,8 +182,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "7042c56b0c9ebd9e",
+  "active": "0fa24c1282d9b9e4",
   "lastOpenFiles": [
+    "Papers/SurVAE flow.md",
     "Papers/VICREG  variance-invariance-covariance regulaization for self-supervised Learning.md",
     "ML/KKT.md",
     "Python/GIL.md",
@@ -180,7 +193,6 @@
     "Engineering/Sharding or Partitioning.md",
     "Engineering/Replication.md",
     "Engineering/Relational Databases.md",
-    "Engineering/Rendez-vous Hashing.md",
-    "books/Design Data Intensive Apps/Ch 4 Encoding and Evolution.md"
+    "Engineering/Rendez-vous Hashing.md"
   ]
 }
